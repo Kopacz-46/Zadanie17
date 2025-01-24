@@ -44,6 +44,8 @@ int main () {
 
         }else if (command == 3){
 return(0);
+        } else {
+        printf("Nie prawidlowy numer polecenia !!! \n");
         }
     }
 
