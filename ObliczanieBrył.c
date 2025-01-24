@@ -6,29 +6,48 @@ return (a*b*c);
 }
 
 float sphere_volume (float r){
-return ((4.0/3.0)*3.14*(r*r*r));
+return ((4.0/3.0)*3.1415926535*(r*r*r));
 }
 
 int main () {
     float a, b, c, r;
+    char command;
 
-    printf("podaj promien kuli (r) \n");
+
+
+    while (1) {
+
+    printf("1 - objetosc prostopadloscianu\n");
+    printf("2 - objetosc kuli \n");
+    printf("3 - wyjscie \n");
+
+        scanf("%1d", &command);
+        if (command == 1){
+        printf("podaj dlugosc podstawy twojego prostopadloscianu (a) \n");
+        scanf("%f", &a);
+
+    printf("podaj szerokosc podstawy twojego prostopadloscianu (b) \n");
+    scanf("%f", &b);
+
+    printf("podaj wysokosc twojego prostopadloscianu (c) \n");
+    scanf("%f", &c);
+
+    printf("objetosc twojego prostopadloscianu wynosi: %f\n", cuboid_volume(a, b, c));
+    printf("\n Brawo obliczyles objetosc :) \n");
+
+        } else if (command == 2){
+     printf("podaj promien kuli (r) \n");
     scanf ("%f", &r);
 
     printf("objetosc twojej kuli wynosi: %f \n", sphere_volume(r));
 
-    //printf("podaj dlugosc podstawy twojego prostopadloscianu (a) \n");
-    //scanf("%f", &a);
 
-    //printf("podaj szerokosc podstawy twojego prostopadloscianu (b) \n");
-    //scanf("%f", &b);
-
-    //printf("podaj wysokosc twojego prostopadloscianu (c) \n");
-    //scanf("%f", &c);
-
-    //printf("objetosc twojego prostopadloscianu wynosi: %f\n", cuboid_volume(a, b, c));
-    //printf("\n Brawo obliczyles objetosc :)");
-
-
+        }else if (command == 3){
 return(0);
+        }
+    }
+
+
+
+
 }
